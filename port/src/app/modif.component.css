@@ -1,0 +1,13 @@
+md-list {
+	font-family: "Roboto";
+}
+input,
+input::-webkit-input-placeholder {
+    font-size: 28px;
+    line-height: 2;
+}
+button {
+
+	width : 20%;
+	height : 15%;
+}

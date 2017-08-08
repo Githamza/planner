@@ -1,0 +1,35 @@
+<md-toolbar color="primary">
+    <span>To Do list</span>
+
+
+</md-toolbar>
+
+<md-toolbar>
+
+
+    <md-input-container style="margin-left:45%; margin-top: 10px">
+        <input #tacheName mdInput placeholder="Tâche à ajouter" value="">
+    </md-input-container>
+
+    <button md-raised-button color="primary" (click)="add(tacheName.value); tacheName.value=''">
+        Ajouter
+    </button>
+</md-toolbar>
+
+
+
+
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+  <div class="item item-1" fxFlex="33%">
+  	 <tachesInit></tachesInit>
+  </div>
+  <div class="item item-3" fxFlex="33%"> <tachesEnCours></tachesEnCours>
+
+    </div>
+  <div class="item item-3" fxFlex="33%"><tachesTerminees></tachesTerminees></div>
+</div>
