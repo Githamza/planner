@@ -9,13 +9,14 @@ J'ai commencé par la partie Front end. au début je créais manuellement les fi
 
 # Executer 
 
-Démarrer serveur NodeJS:
+Pour démarrer serveur NodeJS:
 
 Dans la racine du dossier :
 
 `$ node index.js`
 
-Démarrer Angular 2/4: 
+Pour Démarrer Angular 2/4: 
+
 aller dans `client/plannerfront/` et démarrer le projet avec `$ ng serve`
 
 
