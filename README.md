@@ -15,7 +15,7 @@ Dans la racine du dossier :
 
 `$ node index.js`
 
-Pour Démarrer Angular 2/4: 
+Pour Démarrer Angular: 
 
 aller dans `client/plannerfront/` et démarrer le projet avec `$ ng serve`
 
