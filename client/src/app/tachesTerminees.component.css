@@ -1,0 +1,8 @@
+.selectionnee {
+  background-color: #e6e6fa;
+}
+
+md-card {
+  height: 400px;
+  overflow: auto;
+}

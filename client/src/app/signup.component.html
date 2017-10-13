@@ -1,0 +1,42 @@
+<div class="login">
+  <md-toolbar color="primary">Login</md-toolbar>
+  <md-card [style.height]="height+'px'">
+    <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+      <md-input-container>
+        <input mdInput placeholder="Nom d'utilisateur" value="" name="username" [(ngModel)]="login.username" #username="ngModel" required>
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Mot de passe" type="password" value="" name="password" [(ngModel)]="login.password" #password="ngModel" required>
+      </md-input-container>
+      <br>
+      <a (click)="register()">
+        <p class="nouveau_compte">Créer un compte ?</p>
+      </a>
+      <button md-raised-button color="primary" type="submit">Se connecter</button>
+    </form>
+    <div class="exist">
+      <p *ngIf="this.ok ==0"> Ce compte n'existe pas </p>
+      <p *ngIf="this.ok ==1"> Ce compte existe </p>
+    </div>
+    <hr [style.display]="display">
+    <h3 [style.display]="display"> Nouveau compte </h3>
+    <div [style.display]="display" class="register">
+      <form #formRefregister="ngForm" (ngSubmit)="save(formRefregister.value) ; formRefregister.reset()">
+        <md-input-container>
+          <input mdInput placeholder="Nom d'utilisateur" value="" name="newusername" [(ngModel)]="register.username" #newusername="ngModel" required>
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="Mot de passe" type="password" value="" name="newpassword" validateEqual="confirmPassword" reverse="true" [(ngModel)]="register.password" #newpassword="ngModel" required>
+        </md-input-container>
+        <md-input-container>
+          <input mdInput placeholder="Confirmation du mot de passe" type="password" value="" name="confirmpassword" validateEqual="newpassword" reverse="false" [(ngModel)]="register.confirmpassword" #confirmpassword="ngModel" required>
+        </md-input-container>
+        <br>
+
+        <button [disabled]="!formRefregister.valid" md-raised-button color="primary" type="submit">Créer</button>
+      </form>
+
+    </div>
+  </md-card>
+
+</div>
