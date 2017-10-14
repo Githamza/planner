@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MaterialModule } from '@angular/material';
 
 import { MdDialogModule } from '@angular/material';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule }   from '@angular/router';
-
+import {MdInputModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './navbar.component';
 
@@ -18,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 import { TacheService } from './tache.service';
 import { ModifService } from './modif.service';
-
+import {MaterialModule} from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { SignUpComponent} from './signup.component';
@@ -27,9 +26,10 @@ import { EqualValidator } from './password-confirm.directive';
 
 @NgModule({
   imports: [BrowserModule,
+  MdInputModule,
+  MaterialModule,
     FormsModule,
     HttpModule,
-    MaterialModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/signup', pathMatch: 'full' },
 
