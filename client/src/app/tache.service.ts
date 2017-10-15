@@ -15,7 +15,7 @@ import { Tache } from './tache';
 @Injectable()
 export class TacheService {
   private headers = new Headers({ 'Content-Type': 'application/json' });
-  private tachesUrl = 'http://localhost:4001';  // URL to web api
+  private tachesUrl = './';  // URL to web api
 
   taches: Tache[] = [];
   tabTaches() {
@@ -41,7 +41,7 @@ export class TacheService {
   }
 
   create(name: string): Promise<Tache> {
-    const url = `${this.tachesUrl}/insert`;
+    const url = `${this.tachesUrl}insert`;
     return this.http
       .post(url, JSON.stringify({ name: name, stat: 0, username: localStorage.getItem('currentUser') }), { headers: this.headers })
       .toPromise()
@@ -52,7 +52,7 @@ export class TacheService {
 
 
   update(tache: Tache): Promise<Tache> {
-    const url = `${this.tachesUrl}/${tache.id}`;
+    const url = `${this.tachesUrl}${tache.id}`;
     return this.http
       .put(url, JSON.stringify(tache), { headers: this.headers })
       .toPromise()
@@ -79,7 +79,7 @@ export class TacheService {
     }*/
 
   modifyS(tache: Tache) {
-    const url = `${this.tachesUrl}/${tache.id}`;
+    const url = `${this.tachesUrl}${tache.id}`;
     return this.http
       .put(url, JSON.stringify(tache), { headers: this.headers })
       .toPromise()
