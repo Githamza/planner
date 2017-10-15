@@ -6,8 +6,6 @@ import {LoginService} from './login.service';
 import { LocalStorageModule } from 'angular-2-local-storage';
 import { MdSnackBarRef, MdSnackBar, MdSnackBarConfig } from '@angular/material';
 
-
-
 @Component({
 
   selector: 'signup',
@@ -62,8 +60,6 @@ export class SignUpComponent {
 
         }
       })
-
-
   }
 
   register(): void {

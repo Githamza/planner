@@ -7,8 +7,8 @@ import { User } from './user';
 @Injectable()
 export class LoginService {
   private headers = new Headers({ 'Content-Type': 'application/json' });
-  private loginUrl = 'http://localhost:4001/login';  // URL to web api
-  private registerUrl = 'http://localhost:4001/register';
+  private loginUrl = window.location.protocol+ '//localhost:4001' + '/login';  // URL to web api
+  private registerUrl = '/register';
 
   constructor(private http: Http) { }
 
