@@ -3,7 +3,7 @@ var router = express.Router();
 var express = require("express");
 var mysql = require("mysql");
 var connection = mysql.createConnection({
-  host: '127.0.0.1',
+  host: 'mysql://b77162eee91cc0:e7b12f49@us-cdbr-iron-east-05.cleardb.net/heroku_9dc6f9b455b241c?reconnect=true',
   user: 'root',
   password: 'root',
   database: 'plannerdb',
